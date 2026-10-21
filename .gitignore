@@ -1,0 +1,37 @@
+# OS & System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs & temp
+*.log
+npm-debug.log*
+
+# Font zip archives and license notes
+font/*.zip
+font/*.txt
+
+# Raw uploaded screenshots & scratch assets (privacy protection)
+assets/*_source.png
+assets/*_raw.png
+assets/test_avatar.png
+assets/discord_avatar_clean.png
+assets/status_bubble*
+assets/certs_board.png
+assets/tournament*
+
+# Backend Google Apps Script & Security Secrets
+apps_script_*.js
+*.secret
+*.key
+*.bak
+tmp/
+*PENETRATION*.md

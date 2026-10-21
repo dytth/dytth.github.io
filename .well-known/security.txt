@@ -1,0 +1,4 @@
+Contact: mailto:vtbeu02@gmail.com
+Canonical: https://dytth.is-a.dev/.well-known/security.txt
+Preferred-Languages: vi, en
+Expires: 2027-10-19T00:00:00Z

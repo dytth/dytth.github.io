@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05060c">
+  <title>dytth_young</title>
+  <meta name="description" content="dytth_young — also known as dycon / dy. Portfolio and creative engineering projects.">
+  <meta name="author" content="Vũ Tuấn Mạnh (dytth_young)">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://dytth.is-a.dev/">
+
+  <!-- Open Graph / Meta (Facebook, Threads, Instagram, Zalo, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dytth.is-a.dev/">
+  <meta property="og:site_name" content="dytth_young">
+  <meta property="og:title" content="dytth_young">
+  <meta property="og:description" content="also known as dycon / dy · Portfolio &amp; creative projects">
+  <meta property="og:image" content="https://dytth.is-a.dev/og-image.png">
+  <meta property="og:image:secure_url" content="https://dytth.is-a.dev/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="dytth_young — also known as dycon / dy">
+  <meta property="og:locale" content="en_US">
+
+  <!-- X (formerly Twitter) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://dytth.is-a.dev/">
+  <meta name="twitter:title" content="dytth_young">
+  <meta name="twitter:description" content="also known as dycon / dy · Portfolio &amp; creative projects">
+  <meta name="twitter:image" content="https://dytth.is-a.dev/og-image.png">
+  <meta name="twitter:image:alt" content="dytth_young — also known as dycon / dy">
+
+  <!-- Preconnect for fast asset & API delivery -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.lanyard.rest">
+  <link rel="preconnect" href="https://dcdn.dstn.to">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Typography: Unbounded (Display) + Sora (Body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Document Security Policies (F-02) -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://gateway.dytth.xyz https://api.lanyard.rest https://dcdn.dstn.to wss://api.lanyard.rest; object-src 'none'; base-uri 'self'; form-action 'none';">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=20261019-43">
+
+  <!-- Pinned Vendor Icons with Subresource Integrity (F-03) & Main Application Entry -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" integrity="sha384-ieG+IKD0d/ZPXyCBTMVAbqsQdns8QGJR/e26WMw7M4fkaI/rHcS/YIoi+ah9WGge" crossorigin="anonymous" defer></script>
+  <script type="module" src="js/app.js?v=20261021-2"></script>
+</head>
+
+<body class="is-loading" data-discord-id="786538506851319818" data-bot-id="1549640197220597780">
+  <!-- Interactive Canvas Starfield -->
+  <canvas id="starfield" class="starfield-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-vignette" aria-hidden="true"></div>
+
+  <!-- Terminal Loading Screen -->
+  <section class="project-loading-screen" id="projectLoadingScreen" data-state="loading" aria-live="polite" aria-busy="true">
+    <div class="terminal-loader-line">
+      <span class="terminal-prompt">&gt;</span>
+      <span class="terminal-text" id="terminalLoadingText">CONNECTING TO GOOGLE CLOUD STORAGE...</span>
+      <span class="terminal-pct" id="terminalLoadingPct">[0%]</span>
+      <span class="terminal-cursor" aria-hidden="true">_</span>
+    </div>
+    <button type="button" class="terminal-retry-btn" data-retry-projects hidden>[ RETRY CONNECTION ]</button>
+  </section>
+
+  <!-- Main Content Stream -->
+  <main id="top">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-center reveal">
+        <h1 id="hero-title" class="unselectable" aria-label="dytth_young"><span aria-hidden="true"><span class="name-cyan"><span class="scatter-char">d</span><span class="scatter-char">y</span><span class="scatter-char">t</span><span class="scatter-char">t</span><span class="scatter-char">h</span></span><span class="name-bridge"><span class="scatter-char">_</span></span><span class="name-violet"><span class="scatter-char">y</span><span class="scatter-char">o</span><span class="scatter-char">u</span><span class="scatter-char">n</span><span class="scatter-char">g</span></span></span></h1>
+        <p class="alias unselectable" id="heroAlias">also known as dycon / dy</p>
+
+        <!-- Discord Live Profile Card -->
+        <div class="discord-card">
+          <article class="discord-profile" aria-label="Live Discord profile">
+            <!-- Social Quicklinks (Top-right of card) -->
+            <div class="socials hero-socials" aria-label="Social links">
+              <a href="https://www.facebook.com/dyconmb" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-tooltip="facebook.com/dyconmb">
+                <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="">
+              </a>
+              <button type="button" data-action="copy-discord" aria-label="Copy Discord username" data-tooltip="Discord · dytth_young">
+                <img src="https://cdn.simpleicons.org/discord/5865F2" alt="">
+              </button>
+              <a href="https://www.linkedin.com/in/tuan-manh-vu-a32b38388" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="linkedin.com/in/tuan-manh-vu">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect width="4" height="12" x="2" y="9"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a href="https://github.com/dytth" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="github.com/dytth">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                  <path d="M9 18c-4.51 2-5-2-7-2"/>
+                </svg>
+              </a>
+              <a href="mailto:vtbeu02@gmail.com" aria-label="Email" data-tooltip="vtbeu02@gmail.com">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Profile Banner -->
+            <div class="discord-mini-banner" id="discordMiniBanner" style="background-image: url('https://cdn.discordapp.com/banners/786538506851319818/a_16a50fff904041bce06831634317cb93.gif?size=1024'); background-size: cover; background-position: center;"></div>
+
+            <!-- Profile Content Body -->
+            <div class="discord-profile-content">
+              <div class="profile-top">
+                <div class="avatar-cluster">
+                  <img class="discord-avatar" id="discordAvatar" src="https://cdn.discordapp.com/avatars/786538506851319818/a_99c952e43bb72e7728403345617a76bb.gif?size=256" alt="Discord avatar">
+                  <span class="presence-dot online" id="presenceDot" title="Online"></span>
+                </div>
+                <div class="discord-identity">
+                  <button type="button" class="discord-name" id="discordName" data-action="copy-discord">dytth</button>
+                  <div class="discord-handle" id="discordHandle">dytth_young · dycon</div>
+                </div>
+              </div>
+
+              <!-- Typewriter Bio -->
+              <div class="discord-section">
+                <label>Bio</label>
+                <p class="discord-bio" id="discordBio"></p>
+              </div>
+
+              <!-- Live Discord Activity Tracker -->
+              <div class="discord-playing">
+                <div class="playing-head">
+                  <span id="playingTitle">Activity</span>
+                  <span>•••</span>
+                </div>
+                <div class="playing-body">
+                  <img class="bot-activity-icon" id="botActivityIcon" src="assets/bot-placeholder.svg" alt="DEPRESSED bot avatar">
+                  <div>
+                    <strong id="activityText">No current activity</strong>
+                    <span>
+                      <i data-lucide="gamepad-2" width="12"></i>
+                      <span id="activityElapsed">Live now</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1. COMMERCIAL PROJECTS ==================== -->
+    <section id="work" class="project-category-section">
+      <div class="section-head reveal-from-left">
+        <h2>Project</h2>
+      </div>
+      <div class="projects-grid" id="list-project" aria-live="polite"></div>
+    </section>
+
+    <!-- ==================== 2. FOR COMMUNITY ==================== -->
+    <section id="community" class="project-category-section">
+      <div class="section-head reveal-from-left">
+        <h2>For Community</h2>
+      </div>
+      <div class="projects-grid" id="list-community" aria-live="polite"></div>
+    </section>
+
+    <!-- ==================== 3. PERSONAL PROJECTS ==================== -->
+    <section id="personal" class="project-category-section">
+      <div class="section-head reveal-from-left">
+        <h2>Personal Project</h2>
+      </div>
+      <div class="projects-grid" id="list-personal" aria-live="polite"></div>
+    </section>
+
+    <!-- ==================== CERTIFICATES ==================== -->
+    <section id="certs">
+      <div class="section-head reveal">
+        <h2>Certificates</h2>
+      </div>
+      <div class="credentials">
+        <article class="cert reveal">
+          <i data-lucide="cloud"></i>
+          <a href="https://www.skills.google/public_profiles/be395343-805b-4196-8b27-f7965cace790" target="_blank" rel="noopener noreferrer" aria-label="Google Cloud certificate">
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+          <h3>Google Cloud Computing Foundations</h3>
+          <p>Google Cloud Skills Boost · 2026</p>
+        </article>
+
+        <article class="cert reveal">
+          <i data-lucide="brain-circuit"></i>
+          <a href="https://certificates.mooc.fi/validate/8b3l1x175gf" target="_blank" rel="noopener noreferrer" aria-label="Elements of AI certificate">
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+          <h3>Elements of AI</h3>
+          <p>University of Helsinki · 2026</p>
+        </article>
+
+        <article class="cert reveal">
+          <i data-lucide="sparkles"></i>
+          <a href="https://edu.google.accredible.com/9c63b8cf-108f-41a1-b850-79a05d22d101#acc.njrfUpJ3" target="_blank" rel="noopener noreferrer" aria-label="Gemini certificate">
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+          <h3>Gemini Certified University Student</h3>
+          <p>Google for Education · 2026</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER / CONTACT ==================== -->
+    <section class="contact reveal" id="contact">
+      <h2 aria-label="No app is impossible. Some just take longer.">
+        <span class="slogan-line slogan-primary">No app is impossible.</span><br>
+        <span class="slogan-line slogan-secondary">Some just take longer.</span>
+      </h2>
+
+      <div class="contact-side">
+        <!-- Contact Links -->
+        <div class="contact-links">
+          <a href="https://www.facebook.com/dyconmb" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-tooltip="facebook.com/dyconmb">
+            <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="">
+          </a>
+          <button type="button" data-action="copy-discord" aria-label="Copy Discord username" data-tooltip="Discord · dytth_young">
+            <img src="https://cdn.simpleicons.org/discord/5865F2" alt="">
+          </button>
+          <a href="https://www.linkedin.com/in/tuan-manh-vu-a32b38388" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="linkedin.com/in/tuan-manh-vu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect width="4" height="12" x="2" y="9"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://github.com/dytth" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="github.com/dytth">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+              <path d="M9 18c-4.51 2-5-2-7-2"/>
+            </svg>
+          </a>
+          <a href="https://youtube.com/@dytthyoung" target="_blank" rel="noopener noreferrer" aria-label="YouTube" data-tooltip="youtube.com/@dytthyoung">
+            <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="">
+          </a>
+          <a href="https://tiktok.com/@dycon23" target="_blank" rel="noopener noreferrer" aria-label="TikTok" data-tooltip="tiktok.com/@dycon23">
+            <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="">
+          </a>
+          <a href="mailto:vtbeu02@gmail.com" aria-label="Email" data-tooltip="vtbeu02@gmail.com">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+
+        <!-- Playground Link -->
+        <div class="contact-playground">
+          <a href="/privacy.html" class="playground-link"><span>privacy &amp; terms</span></a>
+          <a href="https://dytth.xyz" target="_blank" rel="noopener noreferrer" class="playground-link">
+            <span>check out my playground</span>
+            <i data-lucide="arrow-up-right" width="13" height="13"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== CASE STUDY POPUP MODAL ==================== -->
+  <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="project-modal-backdrop" data-close-modal></div>
+    <div class="project-modal-dialog">
+      <div class="modal-sticky-bar">
+        <button type="button" class="project-modal-close" data-close-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="project-modal-body" id="modalProjectContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied · dytth_young</div>
+</body>
+</html>
